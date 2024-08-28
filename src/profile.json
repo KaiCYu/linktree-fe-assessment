@@ -1,0 +1,58 @@
+{
+  "username": "Tom Nook",
+  "profileImgUrl": "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+  "bio": "I'll be there with Bells on! Ho ho!",
+  "socials": ["tidal", "instagram", "youtube"],
+  "links": [
+    {
+      "layout": "list",
+      "items": [
+        {
+          "title": "Mabel",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/8/80/Mabel_NH.png"
+        },
+        {
+          "title": "Leif",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/1/1c/Leif_NH.png"
+        },
+        {
+          "title": "K.K. Slider",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/8/81/K.K._Slider_NH.png"
+        },
+        {
+          "title": "Timmy Nook",
+          "linkImgUrl": ""
+        },
+        {
+          "title": "Tommy Nook",
+          "linkImgUrl": ""
+        }
+      ]
+    },
+    {
+      "layout": "grid",
+      "items": [
+        {
+          "title": "Nook's Cranny",
+          "linkImgUrl": "https://dodo.ac/np/images/4/48/NH_Nook%27s_Cranny_Upgraded_Exterior.jpg"
+        },
+        {
+          "title": "Nook 'n' Go",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/1/1b/GC-Nook-%27n%27-Go.jpg"
+        },
+        {
+          "title": "Nookway",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/7/7a/Nookway.gif"
+        },
+        {
+          "title": "Nookington's",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/6/6f/Nookingtons_ACWW.JPG"
+        },
+        {
+          "title": "Nook's Home",
+          "linkImgUrl": "https://static.wikia.nocookie.net/animalcrossing/images/d/df/Completrrs_acnh.jpg"
+        }
+      ]
+    }
+  ]
+}
