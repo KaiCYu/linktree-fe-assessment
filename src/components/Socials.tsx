@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { UserProfileContext } from '../context/userProfileContext';
 import { Container, Icon } from '@mui/material';
 
-import { TSocials } from '../@types/userProfile';
+import { TSocials, UserProfileContextType } from '../@types/userProfile';
 
 import AppleMusic from '../assets/apple-music.svg';
 import Bandcamp from '../assets/bandcamp.svg';
@@ -27,7 +27,7 @@ const SOCIALS_MAP = {
 }
 
 const Socials = () => {
-  const { user } = useContext(UserProfileContext);
+  const { user } = useContext(UserProfileContext) as UserProfileContextType;
   if (!user.socials) return;
 
   return (

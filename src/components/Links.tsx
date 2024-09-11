@@ -3,11 +3,11 @@ import { UserProfileContext } from '../context/userProfileContext';
 import { ThemeContext } from '../context/ThemeContext';
 import { ThemeContextType } from '../@types/theme';
 
-import { LinkItem, LinkGroup } from '../@types/userProfile';
+import { LinkItem, LinkGroup, UserProfileContextType } from '../@types/userProfile';
 import { Avatar, Button, Container, Grid, Typography } from '@mui/material';
 
 const Links = () => {
-  const { user } = useContext(UserProfileContext);
+  const { user } = useContext(UserProfileContext) as UserProfileContextType;
 
   return (
     <Container sx={{ 
@@ -19,8 +19,7 @@ const Links = () => {
         user.links.map(({ layout, items }: LinkGroup, index: number) => {
           if (layout === 'grid') {
             return (
-              // TODO: fix GridLinks
-              <ListLinks key={`grid-links-${layout}-${index}`} links={items} />
+              <GridLinks key={`list-links-${layout}-${index}`} links={items} />
             )
           }
           return (
@@ -78,31 +77,32 @@ const ListLinks = ({ links }: { links: LinkItem[] }) => {
   )
 }
 
-// TODO: fix css for grid view
+// TODO: pull these into separate components
 const GridLinks = ({ links }: { links: LinkItem[] }) => {
-  // console.log('links::: ', links)
+  const { theme } = useContext(ThemeContext) as ThemeContextType;
+
   return (
     <Container>
       <Grid container spacing={1} sx={{
-        // display: 'flex',
-        // flexDirection: 'row',
-        // gap: '8px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
       }}>
         {
           links.map(({ title, linkImgUrl }: LinkItem) => {
             return (
-              <Grid size={8}>
+              <Grid item xs={6} key={`link-${title}`}>
                 <Button 
                   variant="outlined" 
                   sx={{
                     width: '100%',
                     borderRadius: '20px',
                     justifyContent: 'space-between',
+                    backgroundColor: theme.buttonBackgroundColor,
+                    borderColor: theme.buttonBorderColor
                   }}
                   startIcon={<Avatar src={linkImgUrl} />}
                   endIcon={true} // This is a hack to force the startIcon to the left
                 >
-                  
                   <span>
                     {title}
                   </span>
@@ -112,7 +112,6 @@ const GridLinks = ({ links }: { links: LinkItem[] }) => {
           })
         }
       </Grid>
-
     </Container>
   )
 }

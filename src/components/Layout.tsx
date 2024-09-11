@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Drawer } from '@mui/material';
 
-// import { UserProfileContext } from '../context/userProfileContext';
-
 import Profile from './Profile';
 import Links from './Links';
 import Socials from './Socials';

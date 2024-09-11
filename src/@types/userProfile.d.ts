@@ -17,3 +17,7 @@ export interface LinkItem {
 }
 
 export type TSocials = "twitter" | "instagram" | "apple-music" | "bandcamp" | "bands-in-town" | "facebook" | "soundcloud" | "spotify" | "tidal" | "youtube";
+
+export type UserProfileContextType = {
+  user: UserProfile;
+}

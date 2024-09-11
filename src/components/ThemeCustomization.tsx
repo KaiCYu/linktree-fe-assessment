@@ -5,6 +5,12 @@ import { Button, Box } from '@mui/material';
 
 import { HexColorPicker } from "react-colorful";
 
+// const CUSTOMIZATIONS_MAP = {
+//   buttonBackgroundColor: '--theme-button-background-color', 
+//   buttonTextColor: '--theme-button-text-color', 
+//   backgroundColor: '--theme-background-color',
+//   buttonBorderColor: '--theme-button-border-color',
+// }
 
 const ThemeCustomization = ({ toggleDrawer }: { toggleDrawer: (open: boolean) => void}) => {
   const { theme, changeTheme } = useContext(ThemeContext) as ThemeContextType;
