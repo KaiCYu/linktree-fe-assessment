@@ -6,6 +6,7 @@
   "links": [
     {
       "layout": "list",
+      "title": "People",
       "items": [
         {
           "title": "Mabel",
@@ -31,6 +32,7 @@
     },
     {
       "layout": "grid",
+      "title": "Places",
       "items": [
         {
           "title": "Nook's Cranny",

@@ -16,14 +16,20 @@ const Links = () => {
       gap: '12px '
     }}>
       {
-        user.links.map(({ layout, items }: LinkGroup, index: number) => {
+        user.links.map(({ layout, items, title }: LinkGroup, index: number) => {
           if (layout === 'grid') {
             return (
-              <GridLinks key={`list-links-${layout}-${index}`} links={items} />
+              <>
+                <Typography variant="subtitle1" sx={{ display: 'flex', justifyContent: 'center' }}>{title}</Typography>
+                <GridLinks key={`list-links-${layout}-${index}`} links={items} />
+              </>
             )
           }
           return (
-            <ListLinks key={`list-links-${layout}-${index}`} links={items} />
+            <>
+              <Typography variant="subtitle1" sx={{ display: 'flex', justifyContent: 'center' }}>{title}</Typography>
+              <ListLinks key={`list-links-${layout}-${index}`} links={items} />
+            </>
           )
         })
       }

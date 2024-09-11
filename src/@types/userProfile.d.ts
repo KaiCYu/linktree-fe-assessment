@@ -8,6 +8,7 @@ export interface UserProfile {
 
 export interface LinkGroup {
   layout: "list" | "grid";
+  title?: string;
   items: LinkItem[];
 }
 
